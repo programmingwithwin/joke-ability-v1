@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
+import uuid from "uuid";
 import Joke from "./Joke";
 import "../css/JokeList.css";
 
 class JokeList extends Component {
   static defaultProps = {
-    numJokes: 20,
+    numJokes: 20
   };
 
   constructor(props) {
@@ -34,7 +35,7 @@ class JokeList extends Component {
         });
         if (!this.seenJokes.has(res.data.joke)) {
           jokes.push({
-            id: res.data.id,
+            id: uuid(),
             text: res.data.joke,
             funny: 0,
             notFunny: 0,
@@ -48,7 +49,7 @@ class JokeList extends Component {
       }
 
       this.setState(
-        (state) => ({
+        state => ({
           jokes: [...state.jokes, ...jokes],
           loading: false,
         }),
