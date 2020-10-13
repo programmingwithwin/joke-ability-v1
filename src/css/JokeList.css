@@ -1,0 +1,18 @@
+.jokeList {
+  margin: 0 auto;
+  display: flex;
+  width: 65%;
+  margin-bottom: 60px;
+}
+
+.jokeList-jokes {
+  height: 100%;
+  width: 100%;
+  background: rgb(246, 246, 246);
+  overflow: hidden;
+}
+
+.jokeList-spinner {
+  color: rgb(226, 226, 81);
+  text-align: center;
+}

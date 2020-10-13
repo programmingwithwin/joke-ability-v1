@@ -1,0 +1,96 @@
+.joke {
+  position: relative;
+  border-bottom: 2px solid #eeeeee;
+  padding: 1.7rem;
+  /* background-color: rgb(238, 102, 102); */
+}
+
+.joke-text {
+  display: inline-block;
+  width: 90%;
+  font-size: 2rem;
+  top: 0;
+  /* background-color: rgb(91, 216, 69); */
+}
+
+.joke-buttons {
+  display: block;
+  height: 38px;
+  /* background-color: rgb(93, 116, 243); */
+}
+
+.joke-ratings {
+  /* position: inherit; */
+  display: block;
+  margin-bottom: 7px;
+  width: 103px;
+  border-style: solid;
+  border-width: 0.1ch;
+  border-color: rgb(202, 202, 202);
+  background-color: rgb(233, 233, 233);
+  color: rgb(126, 126, 126);
+}
+
+.joke-emoji {
+  position: absolute;
+  font-size: 2rem;
+  right: 3%;
+  top: 10%;
+}
+
+.joke-text,
+.joke-buttons,
+.joke-progress-bar,
+.joke-emoji,
+.joke-ratings {
+  animation-name: move-up;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+}
+
+.joke-emoji:hover {
+  animation-name: spin;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+@keyframes move-up {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes move-down {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(3px);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
